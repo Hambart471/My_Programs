@@ -11,15 +11,11 @@ public:
 	Person(std::string name, double score) :
 		name(name),
 		score(score) {}
-	bool operator()(const Person& p)
-	{
-		return p.score > 180;
-	}
-	//// Define comparison operator for sorting
- //   bool operator<(const Person& other) const
- //   {
- //       return score < other.score;
- //   }
+	// Define comparison operator for sorting
+    bool operator<(const Person& other) const
+    {
+        return score < other.score;
+    }
 	std::string name;
 	double score;
 };
@@ -69,11 +65,17 @@ int main()
 
 	sort(people.begin(), people.end(), [](const Person& a, const Person& b)
 		{
-			return a.score < b.score;
+			return a.score > b.score;
 		});
 
-	//// Sort using operator<
-    //std::sort(people.begin(), people.end());
+	std::cout << '\n';
+	for (const Person& x : people)
+	{
+		std::cout << x.name << "\t" << x.score << '\n';
+	}
+
+	// Sort using operator<
+    std::sort(people.begin(), people.end());
 
 	std::cout << '\n';
 	for (const Person& x : people)
