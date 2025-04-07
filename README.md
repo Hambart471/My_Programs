@@ -42,8 +42,8 @@ I regularly solve algorithmic problems on LeetCode to improve my skills.
 A demonstration of a classic deadlock situation using `std::mutex`.  
 ➡️ [View Code](https://github.com/Hambart471/My_Programs/blob/master/096_multithreading_deadlock/main.cpp)
 
-**Thread Runtime Example**  
-Launching and managing threads at runtime.  
+**Thread Example with Lambda & Timing**  
+Demonstrates creating a thread with a lambda, concurrent execution with the main thread, and measuring execution time using RAII.  
 ➡️ [View Code](https://github.com/Hambart471/My_Programs/blob/master/093_multithreading_runtime/main.cpp)
 
 ---
